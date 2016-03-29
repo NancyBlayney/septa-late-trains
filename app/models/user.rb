@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
 
-	validates_uniqueness_of :mobile_number
+	# validates_uniqueness_of :mobile_number
   validates :mobile_number, phone: { possible: false, allow_blank: true, types: [:mobile] }
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

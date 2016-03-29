@@ -14,16 +14,16 @@ module Acme::RegistrationsHelper
 
 
   def verify_mobile_number_form
-    return '' if current_user.verification_code.empty?
-    p current_user.verification_code.empty?
-    html = <<-HTML
-      <h3>Enter Verification Code</h3>
-      #{form_tag(verifications_path, method: "patch")}
-      #{text_field_tag('verification_code')}
-      #{button_tag('Submit', type: "submit")}
-      </form>
-    HTML
-    html.html_safe
+      return '' if current_user.verification_code == nil
+      p current_user.verification_code == nil
+      html = <<-HTML
+        <h3>Enter Verification Code</h3>
+        #{form_tag(verifications_path, method: "patch")}
+        #{text_field_tag('verification_code')}
+        #{button_tag('Submit', type: "submit")}
+        </form>
+      HTML
+      html.html_safe
   end
 
 

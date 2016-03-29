@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   post 'verifications' => 'verifications#create'
   patch 'verifications' => 'verifications#verify'
+  resources :users, only: [:show]
+  get 'verify_number' => 'users#verify_number'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   root to: 'home#index'

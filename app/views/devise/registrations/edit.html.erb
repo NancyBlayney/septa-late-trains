@@ -13,8 +13,12 @@
     <%= f.text_field :mobile_number %>
     <% if resource.is_verified %>
       You're mobile number is verified.
+    <% else %>
+      <%= link_to 'VERIFY NUMBER', verify_number_path %>
     <% end%>
   </div>
+
+
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -39,10 +43,6 @@
     <%= f.submit "Update" %>
   </div>
 <% end %>
-
-<%= mobile_verification_button %>
-<%= verify_mobile_number_form %>
-
 
 <h3>Cancel my account</h3>
 
