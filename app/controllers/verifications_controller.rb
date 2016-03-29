@@ -16,6 +16,7 @@ class VerificationsController < ApplicationController
 	    :to => to,
 	    :body => "Your verification code is #{current_user.verification_code}."
 	  )
+	  # looking to add some AJAX here so that the page doesn't awkwardly refresh
 	  redirect_to verify_number_path, :flash => { :notice => "A verification code has been sent to your mobile. Please fill it in below." }
 	  return
 	end
@@ -29,7 +30,7 @@ class VerificationsController < ApplicationController
 	      redirect_to user_path(current_user), :flash => { :notice => "Thank you for verifying your mobile number." }
 	      return
 	    else
-	      redirect_to verify_number_path, :flash => { :errors => "Invalid verification code." }
+	      redirect_to verify_number_path, :flash => { :alert => "Invalid verification code." }
 	      return
 	    end
 	end
