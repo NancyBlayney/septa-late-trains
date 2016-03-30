@@ -2,6 +2,7 @@ class RemindersController < ApplicationController
 
   def create
     build_schedule
+    binding.pry
     current_user.reminders.create(reminder_params)
     redirect_to :back
   end
