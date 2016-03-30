@@ -1,5 +1,8 @@
 class RemindersController < ApplicationController
 
+  def new
+  end
+
   def create
     build_schedule
     current_user.reminders.create(reminder_params)
@@ -9,40 +12,37 @@ class RemindersController < ApplicationController
   def show
   end
 
+  def edit
+    @reminder = Reminder.find(params[:id])
+    @times=load_times
+    @offsets=[1,5,10]
+    
+    respond_to do |format|
+      format.js
+    end
+  end
+
+    def load_times
+      start_time =  4.hours
+      end_time =  24.hours+(start_time-1)
+      increment =  10.minutes
+      Array.new(1 + (end_time - start_time)/increment) do |i|
+        (Time.now.midnight + (i*increment) + start_time).strftime("%I:%M %p")
+      end
+    end
+
   def update
+    @reminder = Reminder.find(params[:id])
   end
 
   def destroy
   end
 
   private
-def reminder_params
-  params.require(:reminder).permit(:trainno,:alarmttime,:offset,:days)
-end
-  def build_schedule
-  sched_string=''
 
-  if params[:reminder][:monday]=='1'
-    sched_string+='1'
+  def reminder_params
+    params.require(:reminder).permit(:trainno,:alarmtime,:offset,:days)
   end
-  if params[:reminder][:tuesday]=='1'
-    sched_string+='2'
-  end
-  if params[:reminder][:wednesday]=='1'
-    sched_string+='3'
-  end
-  if params[:reminder][:thursday]=='1'
-    sched_string+='4'
-  end
-  if params[:reminder][:friday]=='1'
-    sched_string+='5'
-  end
-  if params[:reminder][:saturday]=='1'
-    sched_string+='6'
-  end
-  if params[:reminder][:sunday]=='1'
-    sched_string+='0'
-  end
-  params[:reminder][:days]=sched_string
-  end
+
+
 end

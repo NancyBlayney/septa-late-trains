@@ -1,0 +1,55 @@
+
+
+<%= form_for Reminder.new do |f| %>
+<table>
+  <tr>
+    <td>
+      <%=f.label 'Train Number'%>
+    </td>
+    <td>
+      <%= f.text_field :trainno,class: "form-control" %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%=f.label 'Reminder Time'%>
+    </td>
+    <td>
+      <%=f.collection_select :alarmtime,@times,:to_s,:to_s%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%=f.label 'Lateness'%>
+    </td>
+    <td>
+  <%=f.collection_select :offset,@offsets,:to_s,:to_s%>
+  <span>minutes late</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%=f.label 'Schedule'%>
+    </td>
+    <td>
+        <%=f.label :monday%>
+        <%=f.check_box :monday%><br>
+        <%=f.label :tuesday%>
+        <%=f.check_box :tuesday%><br>
+        <%=f.label :wednesday%>
+        <%=f.check_box :wednesday%><br>
+        <%=f.label :thursday%>
+        <%=f.check_box :thursday%><br>
+        <%=f.label :friday%>
+        <%=f.check_box :friday%><br>
+        <%=f.label :saturday%>
+        <%=f.check_box :saturday%><br>
+        <%=f.label :sunday%>
+        <%=f.check_box :sunday%><br>
+    </td>
+  </tr>
+</table>
+<%= f.submit  %>
+<% end %>
+
+

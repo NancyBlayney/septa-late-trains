@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   post 'verifications' => 'verifications#create'
   patch 'verifications' => 'verifications#verify'
   resources :users, only: [:show]
-  resources :reminders, only: [:create,:show,:update,:destroy]
+  resources :reminders, only: [:new, :create,:show, :edit, :update,:destroy]
   get 'verify_number' => 'users#verify_number'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

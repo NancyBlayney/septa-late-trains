@@ -13,3 +13,65 @@
  *= require_tree .
  *= require_self
  */
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.user-info {
+	border: 1px solid black;
+	height: 30vh;
+}
+
+.reminder-show {
+	border: 1px solid black;
+	height: 30vh;
+}
+
+.reminder-form {
+	border: 1px solid black;
+}
+
+
+
+
+@media only screen and (min-width: 500px){
+	.container {
+		width: 80%;
+		height: auto;
+	}
+
+	.card {
+		height: auto;
+	}
+
+	.col1 {
+		float: left;
+		width: 40%;
+	}
+
+	.col2 {
+		float: left;
+		width: 60%;
+	}
+
+	.form {
+		display: none;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
