@@ -5,6 +5,7 @@ class RemindersController < ApplicationController
 
   def create
     build_schedule
+    binding.pry
     current_user.reminders.create(reminder_params)
     redirect_to :back
   end
@@ -16,7 +17,7 @@ class RemindersController < ApplicationController
     @reminder = Reminder.find(params[:id])
     @times=load_times
     @offsets=[1,5,10]
-    
+
     respond_to do |format|
       format.js
     end
@@ -40,9 +41,9 @@ class RemindersController < ApplicationController
 
   private
 
-  def reminder_params
-    params.require(:reminder).permit(:trainno,:alarmtime,:offset,:days)
-  end
+def reminder_params
+  params.require(:reminder).permit(:trainno,:alarmtime,:offset,:days)
+end
 
 
 end
