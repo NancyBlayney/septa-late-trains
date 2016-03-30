@@ -1,3 +1,42 @@
 Email: <%= @user.email %>
 <br><br>
 Phone: <%=@user.mobile_number %>
+
+<% if current_user %>
+<%= form_for Reminder.new do |f| %>
+<table>
+  <tr>
+    <td>
+      <%=f.label 'Train Number'%>
+    </td>
+    <td>
+      <%= f.text_field :trainno,class: "form-control" %>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%=f.label 'Reminder Time'%>
+    </td>
+    <td>
+      <%=f.collection_select :alarmtime,@times,:to_s,:to_s%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%=f.label 'Lateness'%>
+    </td>
+    <td>
+
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <%=f.label 'Schedule'%>
+    </td>
+    <td>
+    </td>
+  </tr>
+</table>
+<%= f.submit  %>
+<% end %>
+<% end %>
