@@ -1,11 +1,14 @@
 class TrainParser
 attr_accessor :trains
 attr_accessor :late_trains
+attr_accessor :train_numbers
+attr_accessor :late_train_numbers
 
 def initialize
-  		response = RestClient.get('http://www3.septa.org/hackathon/TrainView')
-  		@trains=JSON.parse(response)
+  		@trains=JSON.parse(RestClient.get('http://www3.septa.org/hackathon/TrainView'))
   		@late_trains=find_late_trains
+      @train_numbers=find_train_numbers
+        @late_train_numbers=find_late_train_numbers
 end
 
 def find_train(num)
@@ -41,4 +44,26 @@ private
 		end
 		return lateTrains
 	end
+
+  def find_train_numbers
+    trainNums=[]
+    if trains.count !=0
+        trains.each do |t|
+          trainNums.push(t['trainno'])
+        end
+    end
+    return trainNums
+  end
+
+  def find_late_train_numbers
+    trainNums=[]
+    if trains.count !=0
+        trains.each do |t|
+          if t['late']>0
+            trainNums.push(t['trainno'])
+          end
+        end
+    end
+    return trainNums
+  end
 end

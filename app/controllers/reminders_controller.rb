@@ -17,7 +17,7 @@ class RemindersController < ApplicationController
 
   private
 def reminder_params
-  params.require(:reminder).permit(:trainno,:alarmttime,:offset,:days)
+  params.require(:reminder).permit(:trainno,:alarmtime,:offset,:days)
 end
   def build_schedule
   sched_string=''
