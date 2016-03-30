@@ -27,6 +27,13 @@ class RemindersController < ApplicationController
 
   def update
     @reminder = Reminder.find(params[:id])
+    build_schedule
+    if @reminder.update(reminder_params)
+      flash[:notice] = "Successfully updated"
+      redirect_to :back
+    else
+      flash[:notice] = 'error'
+    end
   end
 
   def destroy

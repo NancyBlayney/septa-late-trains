@@ -43,7 +43,6 @@ class ApplicationController < ActionController::Base
   end
 
   def unpack_schedule(rem)
-  	binding.pry
   	if rem[:days].include?'1'
   		rem.monday='1'
     end
