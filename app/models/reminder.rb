@@ -14,15 +14,14 @@ def self.todays_reminders
 end
 
 def self.today_between(start_time,end_time)
-  puts start_time
-  puts end_time
-  start_time=start_time.change(:year => 2000,:month => 01, :day => 01).utc
-  end_time=end_time.change(:year => 2000,:month => 01, :day => 01).utc
-  puts start_time
-  puts end_time
+  start_time=start_time.change(:year => 2000,:month => 01, :day => 01)
+  start_time += Time.zone_offset('EST')
+  end_time=end_time.change(:year => 2000,:month => 01, :day => 01)
+  end_time += Time.zone_offset('EST')
+
   rems=[]
   dateNum=DayConverter.get_day_num(Date.today.strftime('%A'))
-  Reminder.all.where("alarmtime > ? and alarmtime < ?", start_time, end_time.localtime).each do |r|
+  Reminder.all.where("alarmtime > ? and alarmtime < ?", start_time, end_time).each do |r|
     if r[:days].include? dateNum.to_s
         rems.push(r)
     end
