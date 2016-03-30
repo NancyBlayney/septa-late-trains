@@ -11,9 +11,11 @@ Phone: <%=@user.mobile_number %>
     <% @reminders.each do |reminder| %>
       <li>
         A reminder for train number <%= reminder.trainno %>
-        will be sent at <%= reminder.alarmtime.strftime('%H:%M') %>
-        if the train is more than <%= reminder.offset %> minutes late on the following days: 
-        <%= reminder.days %>
+        will be sent at <%= reminder.alarmtime.strftime('%I:%M %p') %>
+        if the train is more than <%= reminder.offset %> minutes late on the following days:
+        <% reminder.days.split("").each do |i|  %>
+        <%=get_day(i)%><br>
+        <% end %>
         <br>
         <%= link_to "Edit", edit_reminder_path(reminder), :class => 'edit-reminder', remote: true %>
         <%= link_to "Delete", reminder_path(reminder), method: :delete %>
@@ -29,9 +31,6 @@ Phone: <%=@user.mobile_number %>
     <%= render 'shared/new' %>
   </div>
   <div id="edit-form-place">
-    
+
   </div>
 </div>
-
-
-
