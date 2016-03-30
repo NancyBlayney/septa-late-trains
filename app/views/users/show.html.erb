@@ -12,9 +12,9 @@ Phone: <%=@user.mobile_number %>
       <li>
         A reminder for train number <%= reminder.trainno %>
         will be sent at <%= reminder.alarmtime.strftime('%I:%M %p') %>
-        if the train is more than <%= reminder.offset %> minutes late on the following days:
+        if the train is more than <%= reminder.offset %> minutes late on the following days:<br><br>
         <% reminder.days.split("").each do |i|  %>
-        <%=get_day(i)%><br>
+        <%=get_day(i).capitalize%><br>
         <% end %>
         <br>
         <%= link_to "Edit", edit_reminder_path(reminder), :class => 'edit-reminder', remote: true %>
