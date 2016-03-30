@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 			redirect_to verify_number_path(@user)
 		end
 		@times=load_times
+		@offsets=[1,5,10]
 	end
 
 	def verify_number
