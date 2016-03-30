@@ -5,7 +5,6 @@ class RemindersController < ApplicationController
 
   def create
     build_schedule
-    binding.pry
     current_user.reminders.create(reminder_params)
     redirect_to :back
   end
@@ -37,6 +36,11 @@ class RemindersController < ApplicationController
   end
 
   def destroy
+    @reminder = Reminder.find(params[:id])
+    if @reminder.destroy
+      redirect_to :back
+    else
+    end
   end
 
   private

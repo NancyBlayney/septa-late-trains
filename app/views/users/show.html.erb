@@ -15,12 +15,14 @@ Phone: <%=@user.mobile_number %>
         if the train is more than <%= reminder.offset %> minutes late on the following days: 
         <%= reminder.days %>
         <br>
-        <%= link_to "Edit Reminder", edit_reminder_path(reminder), :class => 'edit-reminder', remote: true %>
+        <%= link_to "Edit", edit_reminder_path(reminder), :class => 'edit-reminder', remote: true %>
+        <%= link_to "Delete", reminder_path(reminder), method: :delete %>
       </li>
     <% end %>
   </ul>
+  <%= link_to "Set Up New Reminder", new_reminder_path, :class => 'new-reminder'%>
 </div>
-<%= link_to "Set Up New Reminder", new_reminder_path, :class => 'new-reminder'%>
+
 </div>
 <div class="col2">
   <div class="new-reminder-form form">
