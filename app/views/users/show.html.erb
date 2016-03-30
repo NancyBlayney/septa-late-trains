@@ -11,7 +11,7 @@ Phone: <%=@user.mobile_number %>
     <% @reminders.each do |reminder| %>
       <li>
         A reminder for train number <%= reminder.trainno %>
-        will be sent at <%= reminder.alarmtime %>
+        will be sent at <%= reminder.alarmtime.strftime('%H:%M') %>
         if the train is more than <%= reminder.offset %> minutes late on the following days: 
         <%= reminder.days %>
         <br>
