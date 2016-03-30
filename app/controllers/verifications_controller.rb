@@ -2,6 +2,7 @@ class VerificationsController < ApplicationController
 
 
 	def create
+		binding.pry
 	  current_user.verification_code =  1_000_000 + rand(10_000_000 - 1_000_000)
 	  current_user.save
 
@@ -35,5 +36,5 @@ class VerificationsController < ApplicationController
 	end
 
 
-	
+
 end
