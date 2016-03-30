@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-
+has_many :reminders
 	# validates_uniqueness_of :mobile_number
   validates :mobile_number, phone: { possible: false, allow_blank: false, types: [:mobile] }
   # Include default devise modules. Others available are:
@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  
+
 
 
   def needs_mobile_number_verifying?

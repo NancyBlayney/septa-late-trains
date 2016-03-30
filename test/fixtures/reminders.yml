@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trainno: 1
+  alarmtime: 2016-03-30 10:25:41
+  offset: 1
+  days: MyString
+
+two:
+  trainno: 1
+  alarmtime: 2016-03-30 10:25:41
+  offset: 1
+  days: MyString
