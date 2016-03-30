@@ -14,3 +14,19 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+
+	$('.new-reminder').click(function(e){
+		e.preventDefault();
+		$('.edit-reminder-form').remove();
+		$('.new-reminder-form').show();
+	});
+
+	$('.edit-reminder').click(function(e){
+		e.preventDefault();
+		$('.new-reminder-form').hide();
+	});
+
+
+});
