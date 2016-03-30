@@ -42,6 +42,31 @@ class ApplicationController < ActionController::Base
     params[:reminder][:days]=sched_string
   end
 
+  def unpack_schedule(rem)
+  	binding.pry
+  	if rem[:days].include?'1'
+  		rem.monday='1'
+    end
+  	if rem[:days].include?'2'
+  		rem.tuesday='1'
+    end
+    if rem[:days].include? '3'
+  		rem.wednesday='1'
+    end
+    if rem[:days].include? '4'
+  		rem.thursday='1'
+    end
+    if rem[:days].include? '5'
+  		rem.friday='1'
+    end
+    if rem[:days].include? '6'
+  		rem.saturday='1'
+    end
+    if rem[:days].include? '0'
+  		rem.sunday='1'
+    end
+  end
+
 
 
 

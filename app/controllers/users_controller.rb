@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 		if user_signed_in?
 			@user = current_user
 			@reminders = @user.reminders
-			# @reminder = Reminder.find(params[:reminder_id])
 			if @user.is_verified
 
 			else

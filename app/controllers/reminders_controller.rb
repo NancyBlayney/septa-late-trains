@@ -15,22 +15,15 @@ class RemindersController < ApplicationController
 
   def edit
     @reminder = Reminder.find(params[:id])
+    unpack_schedule(@reminder)
     @times=load_times
     @offsets=[1,5,10]
+
 
     respond_to do |format|
       format.js
     end
   end
-
-    def load_times
-      start_time =  4.hours
-      end_time =  24.hours+(start_time-1)
-      increment =  10.minutes
-      Array.new(1 + (end_time - start_time)/increment) do |i|
-        (Time.now.midnight + (i*increment) + start_time).strftime("%I:%M %p")
-      end
-    end
 
   def update
     @reminder = Reminder.find(params[:id])
