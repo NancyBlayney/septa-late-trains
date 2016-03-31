@@ -3,11 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "colors";
 
+.navbar {
+	background: $div;
+	text-align: right;
+	a {
+		display: block;
+		padding: 4%;
+		color: $light-blue;
+	}
 
+}
 
 
 .sign-page {
-	background: linear-gradient(to bottom right, $gra-start, $gra-end);
+	background-color:$div;
 	height: 100vh;
 	text-align: center;
 	color: $light-blue;
@@ -24,6 +33,12 @@
 .form1 {
 	padding-top: 20vh;
 }
+
+.shared-link {
+	text-decoration:none;
+	color: $light-blue;
+}
+
 .container {
   background: url('philly.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -45,9 +60,88 @@
 }
 
 .show-page{
-	height: 100vh;
-	width: 80%;
+	min-height: 100vh;
+	width: 100%;
 	margin: 0 auto;
 	overflow: auto;
+
+	color: $light-blue;
+	h2{
+		padding-top: 5%;
+		text-align: center;
+		text-decoration: underline;
+	}
+}
+
+.user-info{
+	position: relative;
+}
+
+.card {
 	background-color:$div;
+	margin-bottom: 3%;
+	min-height: 20vh;
+	height: 100%;
+	padding: 8% 0;
+}
+
+.info-field{
+	padding: 2%;
+	strong{
+		font-size: 1.2em;
+		font-weight: 700;
+	}
+	a{
+		color: $light-blue;
+		text-decoration: none;
+		border: 1px solid $light-blue;
+		padding: 3%;
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		background: rgba(0,0,0, .2);
+	}
+}
+
+.new-reminder-form, .edit-reminder-form {
+	background: $div;
+	padding: 5%;
+	h2{
+		padding-bottom: 6%;
+	}
+}
+
+.button-class {
+	background: rgba(0,0,0, .2);
+		color: $light-blue;
+		text-decoration: none;
+		border: 1px solid $light-blue;
+		padding: 3%;
+		position: absolute;
+		top: 30px;
+		right: 10px;
+}
+
+#makelittle {
+	font-size: .7em;
+}
+
+
+.exit {
+	text-align: right;
+}
+
+.ex-edit{
+	font-size: 2em;
+	width: 100%;
+	text-align: right;
+	a{
+		text-decoration: none;
+		color: black;
+	}
+
+}
+
+.exit:hover{
+	cursor:pointer;
 }
