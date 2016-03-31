@@ -1,5 +1,6 @@
-
-<h1 class="exit">X</h1>
+<!-- <h1 class="exit">X</h1> -->
+  <i class="fa fa-times exit"></i>
+<div class="new-reminder">
 <%= form_for Reminder.new do |f| %>
 <table>
   <tr>
@@ -49,9 +50,9 @@
         <%=f.check_box :sunday%><br>
     </td>
   </tr>
-  <tr>
-    <td></td>
-    <td><%= f.submit  %></td>
+  <tr >
+    <td class="bottom-row"colspan=2><%= f.submit  %></td>
   </tr>
 </table>
 <% end %>
+</div>

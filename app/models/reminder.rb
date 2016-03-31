@@ -1,5 +1,6 @@
 class Reminder < ActiveRecord::Base
 belongs_to :user
+validates :trainno, presence: true
 attr_accessor :monday,:tuesday,:wednesday,:thursday,:friday,:saturday,:sunday
 
 def self.todays_reminders

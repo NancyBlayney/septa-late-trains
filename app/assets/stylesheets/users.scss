@@ -25,7 +25,7 @@
 	padding-top: 20vh;
 }
 .container {
-  background: url('philly.jpg') no-repeat center center fixed; 
+  background: url('philly.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -34,6 +34,15 @@
   height: 100vh;
 }
 
+.exit {
+	color:pink;
+	// position: absolute;
+	// right: 0;
+  :hover{
+  	cursor:pointer;
+    color:$main-blue;
+  }
+}
 
 .show-page{
 	height: 100vh;
@@ -41,26 +50,4 @@
 	margin: 0 auto;
 	overflow: auto;
 	background-color:$div;
-}
-
-
-
-
-.exit {
-	text-align: right;
-}
-
-.ex-edit{
-	font-size: 2em;
-	width: 100%;
-	text-align: right;
-	a{
-		text-decoration: none;
-		color: black;
-	}
-	
-}
-
-.exit:hover{
-	cursor:pointer;
 }
