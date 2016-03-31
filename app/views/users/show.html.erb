@@ -2,7 +2,7 @@
 <div class="user-info card">
 Email: <%= @user.email %>
 <br><br>
-Phone: <%=@user.mobile_number %>
+Phone: <%=number_to_phone(@user.mobile_number) %>
 </div>
 
 <div class="reminder-show card">
@@ -14,7 +14,7 @@ Phone: <%=@user.mobile_number %>
         will be sent at <%= reminder.alarmtime.strftime('%I:%M %p') %>
         if the train is more than <%= reminder.offset %> minutes late on the following days:<br><br>
         <% reminder.days.split("").each do |i|  %>
-        <%=get_day(i).capitalize%><br>
+        <%=get_day_short(i).capitalize%><br>
         <% end %>
         <br>
         <%= link_to "Edit", edit_reminder_path(reminder), :class => 'edit-reminder', remote: true %>

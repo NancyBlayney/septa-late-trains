@@ -23,8 +23,9 @@
       <%=f.label 'Lateness'%>
     </td>
     <td>
-  <%=f.collection_select :offset,@offsets,:to_s,:to_s%>
-  <span>minutes late</span>
+      <span>More than</span>
+        <%=f.collection_select :offset,@offsets,:to_s,:to_s%>
+        <span>minute(s) late</span>
     </td>
   </tr>
   <tr>
@@ -48,8 +49,9 @@
         <%=f.check_box :sunday%><br>
     </td>
   </tr>
+  <tr>
+    <td></td>
+    <td><%= f.submit  %></td>
+  </tr>
 </table>
-<%= f.submit  %>
 <% end %>
-
-
