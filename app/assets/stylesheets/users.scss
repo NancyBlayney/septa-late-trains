@@ -11,9 +11,7 @@
 		padding: 4%;
 		color: $light-blue;
 	}
-
 }
-
 
 .sign-page {
 	background-color:$div;
@@ -117,7 +115,6 @@
 	font-size: .7em;
 }
 
-
 .exit {
 	text-align: right;
 }
@@ -128,9 +125,8 @@
 	text-align: right;
 	a{
 		text-decoration: none;
-		color: black;
+		color: $light-blue;
 	}
-	
 }
 
 .exit:hover{
