@@ -8,7 +8,7 @@ def initialize
   		@trains=JSON.parse(RestClient.get('http://www3.septa.org/hackathon/TrainView'))
   		@late_trains=find_late_trains
       @train_numbers=find_train_numbers
-        @late_train_numbers=find_late_train_numbers
+      @late_train_numbers=find_late_train_numbers
 end
 
 def find_train(num)
@@ -36,10 +36,10 @@ end
 
 private
 	def find_late_trains
-		lateTrains=[]
+		lateTrains={}
 		@trains.each do |t|
 			if t['late'] >0
-				lateTrains.push(t)
+				lateTrains[t['trainno']]=t['late']
 			end
 		end
 		return lateTrains
