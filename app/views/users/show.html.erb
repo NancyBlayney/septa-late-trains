@@ -2,7 +2,7 @@
 <div class="user-info card">
 Email: <%= @user.email %>
 <br><br>
-Phone: <%=@user.mobile_number %>
+Phone: <%=number_to_phone(@user.mobile_number) %>
 </div>
 
 <div class="reminder-show card">
