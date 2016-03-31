@@ -6,30 +6,58 @@
   .reminder-header {
     table {
       margin: auto;
+      color: white;
       .new-reminder {
-        color: black;
-
-
+        color: white;
+         :hover {
+          color: $main-blue;
+        }
       }
     }
   }
   .reminder-container {
     display: flex;
     justify-content: space-around;
-    border: 1px black solid;
+    border: 1px $light-blue solid;
     border-radius: 5px;
-    margin: 5px;
-    background-color: $main-blue;
-    // color:white;
+    margin: 7px;
+    background-color: black;
+    color: $light-blue;
     padding: 5px;
     a {
       color: transparent;
        :hover {
-        color: blue;
+        color: $main-blue;
       }
       i {
-        color: white;
+        color: $light-blue;
       }
     }
   }
 }
+.new-reminder,
+.edit-reminder-form {
+  table {
+    color: $light-blue;
+    th,
+    td {
+      border: 1px solid $light-blue;
+    }
+    .bottom-row {
+      text-align: right;
+      padding: 2px;
+    }
+  }
+}
+
+
+// .ex-edit{
+// 	font-size: 2em;
+// 	width: 100%;
+// 	text-align: right;
+// 	a{
+// 		text-decoration: none;
+// 		color: black;
+// 	}
+//
+// }
