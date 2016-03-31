@@ -1,62 +1,64 @@
-<div class="col1">
-  <div class="user-info card">
-    Email:
-    <%= @user.email %>
-    <br><br>
-    Phone:
-    <%=number_to_phone(@user.mobile_number) %>
-    <br>
-    <%= link_to 'Edit Profile', edit_user_registration_path %>
-  </div>
-
-  <div class="reminder-show card">
-    <div class="reminder-header">
-      <table>
-        <tr>
-          <td>
-            <h3>My Reminders</h3>
-          </td>
-          <td>
-            <%= link_to  new_reminder_path, :class => 'new-reminder' do%>
-            <i class="fa fa-plus-square fa-2x"></i>
-            <% end %>
-          </td>
-        </tr>
-      </table>
+<div class="show-page">
+  <div class="col1">
+    <div class="user-info card">
+      Email:
+      <%= @user.email %>
+      <br><br>
+      Phone:
+      <%=number_to_phone(@user.mobile_number) %>
+      <br>
+      <%= link_to 'Edit Profile', edit_user_registration_path %>
     </div>
 
-    <% @reminders.each do |reminder| %>
-    <div class="reminder-container">
-      <div class="train-container">
-        <%= reminder.trainno %>
+    <div class="reminder-show card">
+      <div class="reminder-header">
+        <table>
+          <tr>
+            <td>
+              <h3>My Reminders</h3>
+            </td>
+            <td>
+              <%= link_to  new_reminder_path, :class => 'new-reminder' do%>
+              <i class="fa fa-plus-square fa-2x"></i>
+              <% end %>
+            </td>
+          </tr>
+        </table>
       </div>
-      <div class="time-container">
-        <%= reminder.alarmtime.strftime('%I:%M %p') %><br>
-      </div>
-      <div class="schedule-container">
-        <% reminder.days.split("").each do |i|  %>
-        <%=get_day_short(i).capitalize%><br>
-        <% end %>
-      </div>
-      <div class="button-container">
-        <%= link_to edit_reminder_path(reminder), :class => 'edit-reminder', remote: true do%>
-        <i class="fa fa-pencil-square-o "></i>
-        <% end %>
-        <%= link_to  reminder_path(reminder), method: :delete, data: { confirm: 'Are you certain you want to delete this?' } do%>
-        <i class="fa fa-times"></i>
-        <% end %>
 
+      <% @reminders.each do |reminder| %>
+      <div class="reminder-container">
+        <div class="train-container">
+          <%= reminder.trainno %>
+        </div>
+        <div class="time-container">
+          <%= reminder.alarmtime.strftime('%I:%M %p') %><br>
+        </div>
+        <div class="schedule-container">
+          <% reminder.days.split("").each do |i|  %>
+          <%=get_day_short(i).capitalize%><br>
+          <% end %>
+        </div>
+        <div class="button-container">
+          <%= link_to edit_reminder_path(reminder), :class => 'edit-reminder', remote: true do%>
+          <i class="fa fa-pencil-square-o "></i>
+          <% end %>
+          <%= link_to  reminder_path(reminder), method: :delete, data: { confirm: 'Are you certain you want to delete this?' } do%>
+          <i class="fa fa-times"></i>
+          <% end %>
+
+        </div>
       </div>
+
+      <% end %>
+
     </div>
 
-    <% end %>
-
   </div>
-
-</div>
-<div class="col2">
-  <div class="new-reminder-form form">
-    <%= render 'shared/new' %>
+  <div class="col2">
+    <div class="new-reminder-form form">
+      <%= render 'shared/new' %>
+    </div>
+    <div id="edit-form-place"></div>
   </div>
-  <div id="edit-form-place"></div>
 </div>

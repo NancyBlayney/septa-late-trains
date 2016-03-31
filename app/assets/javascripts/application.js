@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+
 //= require_tree .
 
 $(document).ready(function(){
@@ -22,6 +22,12 @@ $(document).ready(function(){
 		$('.edit-reminder-form').remove();
 		$('.new-reminder-form').show();
 	});
+
+	$('.exit').click(function(e){
+		e.preventDefault();
+		$('.new-reminder-form').hide();
+	});
+
 
 	$('.edit-reminder').click(function(e){
 		e.preventDefault();
