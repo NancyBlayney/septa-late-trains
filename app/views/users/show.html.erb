@@ -1,13 +1,17 @@
 <div class="show-page">
   <div class="col1">
     <div class="user-info card">
-      Email:
-      <%= @user.email %>
-      <br><br>
-      Phone:
-      <%=number_to_phone(@user.mobile_number) %>
-      <br>
-      <%= link_to 'Edit Profile', edit_user_registration_path %>
+      <h2>My Information</h2>
+      <div class="info-field">
+        <strong>Email:</strong> <%= @user.email %>
+      </div>
+      <div class="info-field">
+        <strong>Phone:</strong>
+        <%=number_to_phone(@user.mobile_number) %>
+      </div>
+      <div class="info-field">
+        <strong><%= link_to 'Edit Profile', edit_user_registration_path %></strong>
+      </div>
     </div>
 
     <div class="reminder-show card">
@@ -15,7 +19,7 @@
         <table>
           <tr>
             <td>
-              <h3>My Reminders</h3>
+              <h2>My Reminders</h2>
             </td>
             <td>
               <%= link_to  new_reminder_path, :class => 'new-reminder' do%>
