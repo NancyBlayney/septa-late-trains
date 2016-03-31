@@ -35,20 +35,20 @@
     }
   }
 }
-// .new-reminder,
-// .edit-reminder-form {
-//   table {
-//     color: $light-blue;
-//     th,
-//     td {
-//       border: 1px solid $light-blue;
-//     }
-//     .bottom-row {
-//       text-align: right;
-//       padding: 2px;
-//     }
-//   }
-// }
+.new-reminder,
+.edit-reminder-form {
+  table {
+    color: $light-blue;
+    th,
+    td {
+      border: 1px solid $light-blue;
+    }
+    .bottom-row {
+      text-align: right;
+      padding: 2px;
+    }
+  }
+}
 
 
 // .ex-edit{
