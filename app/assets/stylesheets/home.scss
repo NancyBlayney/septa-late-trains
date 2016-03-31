@@ -4,34 +4,57 @@
 
 $main-blue: #268DF4;
 $light-blue: #E9F3FD;
+$dark-blue: #1a62aa;
+$gra-start: #19a9a0;
+$gra-end: #36B8E9;
 
 html{
 	background-color: $light-blue;
 }
 
+
+
 #home-page{
-	background-color: $main-blue;
+	background: linear-gradient(to bottom right, $gra-start, $gra-end);
+	height: 100vh;
+	color: $light-blue;
+	text-align:center;
+}
+
+.logo {
+	padding-top: 5vh;
+	font-size: 1.5em;
+}
+
+.buttons {
+	padding-top: 20vh;
 }
 
 .home-div a {
+	color: $light-blue;
 	text-decoration: none;
 	display:block;
-	height: 100%;
-	width: 100%;
-  vertical-align: middle;
-  display: table-cell;
+	width: 30%;
+	height: 8vh;
+	margin: 0 auto;
+	margin-top: 2vh;
+	border-radius:28px;
+	border:1px solid #148780;
+	cursor:pointer;
+	font-size:2em;
+	padding:10px 20px;
+	text-shadow:0px 1px 0px #2f6627;
+	background: linear-gradient(to bottom right, #169890, #30a5d1);
 }
 
 
-.home-div{
-	height:50vh;
-}
 
 
-.sign-in{
 
-}
 
-.sign-up{
 
-}
+
+
+
+
+
