@@ -16,7 +16,7 @@ Phone: <%=@user.mobile_number %>
         <%= reminder.days %>
         <br>
         <%= link_to "Edit", edit_reminder_path(reminder), :class => 'edit-reminder', remote: true %>
-        <%= link_to "Delete", reminder_path(reminder), method: :delete %>
+        <%= link_to "Delete", reminder_path(reminder), method: :delete, data: { confirm: 'Are you certain you want to delete this?' } %>
       </li>
     <% end %>
   </ul>

@@ -2,7 +2,6 @@ class VerificationsController < ApplicationController
 
 
 	def create
-		binding.pry
 	  current_user.verification_code =  1_000_000 + rand(10_000_000 - 1_000_000)
 	  current_user.save
 
@@ -24,16 +23,16 @@ class VerificationsController < ApplicationController
 
 
 	def verify
-	      if current_user.verification_code == params[:verification_code]
-	      current_user.is_verified = true
-	      current_user.verification_code = ''
-	      current_user.save
-	      redirect_to user_path(current_user), :flash => { :notice => "Thank you for verifying your mobile number." }
-	      return
-	    else
-	      redirect_to verify_number_path, :flash => { :alert => "Invalid verification code." }
-	      return
-	    end
+    if current_user.verification_code == params[:verification_code]
+      current_user.is_verified = true
+      current_user.verification_code = ''
+      current_user.save
+      redirect_to user_path(current_user), :flash => { :notice => "Thank you for verifying your mobile number." }
+      return
+    else
+      redirect_to verify_number_path, :flash => { :alert => "Invalid verification code." }
+      return
+    end
 	end
 
 
