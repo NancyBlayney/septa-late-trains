@@ -1,12 +1,7 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-$main-blue: #268DF4;
-$light-blue: #E9F3FD;
-$dark-blue: #1a62aa;
-$gra-start: #19a9a0;
-$gra-end: #36B8E9;
-
+@import "colors";
 
 .sign-page {
 	background: linear-gradient(to bottom right, $gra-start, $gra-end);

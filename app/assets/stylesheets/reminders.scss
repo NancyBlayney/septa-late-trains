@@ -1,5 +1,35 @@
-.reminder-show{
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "colors";
+.reminder-show {
+  // text-align: center;
+  .reminder-header {
+    table {
+      margin: auto;
+      .new-reminder {
+        color: black;
 
 
-
+      }
+    }
+  }
+  .reminder-container {
+    display: flex;
+    justify-content: space-around;
+    border: 1px black solid;
+    border-radius: 5px;
+    margin: 5px;
+    background-color: $main-blue;
+    // color:white;
+    padding: 5px;
+    a {
+      color: transparent;
+       :hover {
+        color: blue;
+      }
+      i {
+        color: white;
+      }
+    }
+  }
 }

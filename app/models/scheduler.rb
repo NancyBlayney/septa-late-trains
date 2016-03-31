@@ -1,7 +1,7 @@
 class Scheduler
   def self.run
     @train_parser=TrainParser.new
-    @rem=Reminder.today_between(Time.now-2.hours,Time.now)
+    @rem=Reminder.today_between(Time.now-3.hours,Time.now)
     TwilioManager.send_message(self.match_reminders)
   end
 
