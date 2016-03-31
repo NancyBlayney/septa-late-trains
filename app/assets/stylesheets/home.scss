@@ -1,3 +1,37 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$main-blue: #268DF4;
+$light-blue: #E9F3FD;
+
+html{
+	background-color: $light-blue;
+}
+
+#home-page{
+	background-color: $main-blue;
+}
+
+.home-div a {
+	text-decoration: none;
+	display:block;
+	height: 100%;
+	width: 100%;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+
+.home-div{
+	height:50vh;
+}
+
+
+.sign-in{
+
+}
+
+.sign-up{
+
+}
