@@ -3,6 +3,8 @@
 Email: <%= @user.email %>
 <br><br>
 Phone: <%=number_to_phone(@user.mobile_number) %>
+<br>
+<%= link_to 'Edit Profile', edit_user_registration_path %>
 </div>
 
 <div class="reminder-show card">
