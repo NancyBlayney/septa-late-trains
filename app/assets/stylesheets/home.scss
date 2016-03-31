@@ -2,20 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-$main-blue: #268DF4;
-$light-blue: #E9F3FD;
-$dark-blue: #1a62aa;
-$gra-start: #19a9a0;
-$gra-end: #36B8E9;
-
+@import "colors";
 html{
 	background-color: $light-blue;
 }
 
-
+.container {
+  background: url('philly.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: auto;
+  height: 100vh;
+}
 
 #home-page{
-	background: linear-gradient(to bottom right, $gra-start, $gra-end);
+	background: $div;
 	height: 100vh;
 	color: $light-blue;
 	text-align:center;
@@ -35,16 +38,14 @@ html{
 	text-decoration: none;
 	display:block;
 	width: 30%;
-	height: 8vh;
+	height: 6vh;
 	margin: 0 auto;
 	margin-top: 2vh;
-	border-radius:28px;
-	border:1px solid #148780;
+	border:3px solid $light-blue;
 	cursor:pointer;
-	font-size:2em;
+	font-size:4vh;
 	padding:10px 20px;
-	text-shadow:0px 1px 0px #2f6627;
-	background: linear-gradient(to bottom right, #169890, #30a5d1);
+	background: rgba(0,0,0,.7);
 }
 
 
