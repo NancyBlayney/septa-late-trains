@@ -2,13 +2,17 @@
 <div id="home-page">
 	<% if user_signed_in? %>
 	<% else %>
-
+<div class="logo">
+	<h1>Time. Train. Text.</h1>
+</div>
+<div class="buttons">
 	<div class="sign-in home-div">
 		<%= link_to 'Sign In', new_user_session_path %>
 	</div>
-
+<div class="skew"></div>
 	<div class="sign-up home-div">
 		<%= link_to 'Sign Up', new_user_registration_path %>
 		<% end %>
+	</div>
 	</div>
 </div>

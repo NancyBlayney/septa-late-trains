@@ -14,12 +14,20 @@
  *= require_self
  */
 
+html, body, p, h1, h2{
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-family: 'Poiret One', cursive;
+	font-weight: 500;
+}
+
 .container {
 	width: 100%;
 	margin: 0 auto;
 }
-
-
 
 .user-info {
 	border: 1px solid black;
