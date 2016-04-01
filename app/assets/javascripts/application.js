@@ -35,4 +35,10 @@ $(document).ready(function(){
 	});
 
 
+
+	setTimeout(function(){
+    $('.notice, .alert').remove();
+  }, 5000);
+
+
 });

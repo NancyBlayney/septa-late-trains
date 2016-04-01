@@ -19,7 +19,7 @@ module Acme::RegistrationsHelper
       html = <<-HTML
         <h5>Enter Verification Code</h5>
         #{form_tag(verifications_path, method: "patch")}
-        #{text_field_tag('verification_code')}
+        #{text_field_tag('verification_code')}<br><br>
         #{button_tag('Submit', type: "submit")}
         </form>
       HTML
