@@ -31,6 +31,9 @@ html {
 
 
 
+.form {
+	display: none;
+}
 
 @media only screen and (min-width: 500px){
 	.showpage {
@@ -53,22 +56,6 @@ html {
 		width: 60%;
 	}
 
-	.form {
-		display: none;
-	}
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
