@@ -48,7 +48,12 @@ html{
 	background: rgba(0,0,0,.7);
 }
 
-
+@media only screen and (min-width: 600px){
+	#home-page{
+		width: 80%;
+		margin: 0 auto;
+	}
+}
 
 
 
