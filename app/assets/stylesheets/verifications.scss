@@ -1,3 +1,42 @@
 // Place all the styles related to the verifications controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'colors';
+
+
+
+
+.verification-page{
+	width: 100%;
+	margin: 0 auto;
+	background: $div;
+	text-align: center;
+	min-height: 100vh;
+	color: $light-blue;
+	h1{ 
+		padding-bottom: 4%;
+	}
+	a{
+		background: rgba(0,0,0, .2);
+	  color: $light-blue;
+	  text-decoration: none;
+	  border: 1px solid $light-blue;
+	  padding: 1%;
+	  margin: 4%;
+
+	  &:hover {
+	  	color: $main-blue;
+	  	border-color: $main-blue;
+	  }
+	}
+}
+
+
+
+
+@media only screen and (min-width: 600px){
+	.verification-page{
+		width: 80%;
+	}
+}

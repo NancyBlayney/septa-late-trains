@@ -1,10 +1,15 @@
+<div class="verification-page">
+
 <!-- displays user's number as they entered it while signing up -->
-<%= @user.mobile_number %>
-
+<div class="phone-number">
+<h1><%= number_to_phone(@user.mobile_number) %></h1>
+</div>
 <!-- this should be the option to edit their number if they made a mistake -->
+<div class="edit-number-button">
 <%= link_to 'Edit Number', edit_user_registration_path(current_user) %>
-
+</div>
  
 <%= mobile_verification_button %>
 
 <%= verify_mobile_number_form %>
+</div>

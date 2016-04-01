@@ -22,7 +22,7 @@ $(document).ready(function(){
 		$('.edit-reminder-form').remove();
 		$('.new-reminder-form').show();
 
-	  document.getElementById('new-reminder-form').scrollIntoView();  
+	  document.getElementById('new-reminder-form').scrollIntoView();
 	});
 
 	$('.exit').click(function(e){
@@ -36,6 +36,9 @@ $(document).ready(function(){
 		$('.new-reminder-form').hide();
 	});
 
+	setTimeout(function(){
+    $('.notice, .alert').remove();
+  }, 5000);
 
 
 });
