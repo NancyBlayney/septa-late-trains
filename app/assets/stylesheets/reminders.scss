@@ -38,7 +38,7 @@
     }
   }
 }
-.new-reminder,
+.new-reminder-wrapper,
 .edit-reminder-form {
   table {
     color: $light-blue;
@@ -51,4 +51,8 @@
       padding: 2px;
     }
   }
+}
+.exit{
+  display: block;
+  text-align: right;
 }
