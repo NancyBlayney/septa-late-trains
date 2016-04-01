@@ -1,124 +1,3 @@
-// @import "colors";
-// .navbar {
-//     background: $div;
-//     text-align: right;
-//     a {
-//         display: block;
-//         padding: 4%;
-//         color: $light-blue;
-//     }
-// }
-
-// .sign-page {
-//     background-color:$div;
-//     height: 100vh;
-//     text-align: center;
-//     color: $light-blue;
-// }
-// .field {
-//     margin-top: 2vh;
-// }
-// .actions {
-//     padding: 30px;
-// }
-// .form1 {
-//     padding-top: 20vh;
-// }
-// .shared-link {
-//     text-decoration:none;
-//     color: $light-blue;
-// }
-// .container {
-//   background: url('philly.jpg') no-repeat center center fixed;
-//   -webkit-background-size: cover;
-//   -moz-background-size: cover;
-//   -o-background-size: cover;
-//   background-size: cover;
-//   overflow: auto;
-//   height: 100vh;
-// }
-// .show-page{
-//     min-height: 100vh;
-//     width: 100%;
-//     margin: 0 auto;
-//     overflow: auto;
-//     color: $light-blue;
-//     h2{
-//         padding-top: 5%;
-//         text-align: center;
-//         text-decoration: underline;
-//     }
-// }
-// .user-info{
-//     position: relative;
-// }
-// .card {
-//     background-color:$div;
-//     margin-bottom: 3%;
-//     min-height: 20vh;
-//     height: 100%;
-//     padding: 8% 0;
-// }
-// .info-field{
-//     padding: 2%;
-//     strong{
-//         font-size: 1.2em;
-//         font-weight: 700;
-//     }
-//     a{
-//         color: $light-blue;
-//         text-decoration: none;
-//         border: 1px solid $light-blue;
-//         padding: 3%;
-//         position: absolute;
-//         bottom: 10px;
-//         right: 10px;
-//         background: rgba(0,0,0, .2);
-//     }
-// }
-// .new-reminder-form, .edit-reminder-form {
-//     background: $div;
-//     padding: 5%;
-//     h2{
-//         padding-bottom: 6%;
-//     }
-// }
-// .button-class {
-//     background: rgba(0,0,0, .2);
-//         color: $light-blue;
-//         text-decoration: none;
-//         border: 1px solid $light-blue;
-//         padding: 3%;
-//         position: absolute;
-//         top: 30px;
-//         right: 10px;
-// }
-// #makelittle {
-//     font-size: .7em;
-// }
-
-// .exit {
-//     text-align: right;
-// }
-// .ex-edit{
-//     font-size: 2em;
-//     width: 100%;
-//     text-align: right;
-//     a{
-//         text-decoration: none;
-//         color: $light-blue;
-//     }
-// }
-
-// .exit:hover{
-//     cursor:pointer;
-// 	}
-
-
-
-
-
-
 @import "colors";
 .navbar {
     background: $div;
@@ -204,15 +83,16 @@
     }
 }
 .button-class {
-    background: rgba(0,0,0, .2);
-        color: $light-blue;
-        text-decoration: none;
-        border: 1px solid $light-blue;
-        padding: 3%;
-        position: absolute;
-        top: 30px;
-        right: 10px;
+  background: rgba(0,0,0, .2);
+  color: $light-blue;
+  text-decoration: none;
+  border: 1px solid $light-blue;
+  padding: 3%;
+  position: absolute;
+  top: 30px;
+  right: 10px;
 }
+
 #makelittle {
     font-size: .7em;
 }
@@ -231,3 +111,66 @@
 .exit:hover{
     cursor:pointer;
 }
+
+
+@media only screen and (min-width: 600px){
+	.show-page{
+    // min-height: 100vh;
+    background: $div;
+    width: 80%;
+    margin: 0 auto;
+    overflow: auto;
+    color: $light-blue;
+    h2{
+        padding-top: 5%;
+        text-align: center;
+        text-decoration: underline;
+    }
+	}
+
+	.navbar{
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.sign-page {
+		width: 80%;
+		margin: 0 auto;
+    background-color:$div;
+    height: 100vh;
+    text-align: center;
+    color: $light-blue;
+	}
+
+	.button-class {
+	  background: rgba(0,0,0, .2);
+	  color: $light-blue;
+	  text-decoration: none;
+	  border: 1px solid $light-blue;
+	  padding: 3%;
+	  position: absolute;
+	  top: 20%;
+	  right: 20%;
+	}
+
+	.card {
+    background-color:$div;
+    margin: 5%;
+    min-height: 20vh;
+    height: 100%;
+    padding: 8% 0;
+	}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+

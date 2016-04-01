@@ -1,3 +1,11 @@
 // Place all the styles related to the verifications controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'colors';
+
+.verification-page{
+	width: 80%;
+	margin: 0 auto;
+	background: $div;
+}
