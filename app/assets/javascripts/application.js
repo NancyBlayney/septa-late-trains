@@ -21,6 +21,8 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('.edit-reminder-form').remove();
 		$('.new-reminder-form').show();
+
+	  document.getElementById('new-reminder-form').scrollIntoView();  
 	});
 
 	$('.exit').click(function(e){
@@ -33,6 +35,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('.new-reminder-form').hide();
 	});
+
 
 
 });
