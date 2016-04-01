@@ -37,8 +37,8 @@ $(document).ready(function(){
 
 
 	setTimeout(function(){
-    $('.notice, .alert').remove();
-  }, 5000);
+    $('.notice, .alert, .advice').remove();
+  }, 3000);
 
 
 });

@@ -6,6 +6,7 @@ class RemindersController < ApplicationController
   def create
     build_schedule
     current_user.reminders.create(reminder_params)
+    flash[:notice] = "New reminder successfully added."
     redirect_to :back
   end
 
@@ -28,18 +29,20 @@ class RemindersController < ApplicationController
     @reminder = Reminder.find(params[:id])
     build_schedule
     if @reminder.update(reminder_params)
-      flash[:notice] = "Successfully updated"
+      flash[:notice] = "  Successfully updated your reminder."
       redirect_to :back
     else
-      flash[:notice] = 'error'
+      flash[:alert] = '  There was an error updating your reminder.'
     end
   end
 
   def destroy
     @reminder = Reminder.find(params[:id])
     if @reminder.destroy
+      flash[:notice] = '  Your reminder was successfully deleted.'
       redirect_to :back
     else
+      flash[:alert] = '  There was a problem deleting your reminder.'
     end
   end
 

@@ -30,9 +30,32 @@ html {
 }
 
 
+.notice, .alert {
+	width: 100%;
+	background: rgba(0, 0, 0, .7);
+	font-weight: 600;
+	font-size: 1.3em;
+}
+
+.notice{
+	color: #329932;
+}
+
+.alert{
+	color: #FF0000;
+}
+
+
+
 
 
 @media only screen and (min-width: 500px){
+
+	.notice, .alert {
+		width: 80%;
+		margin: 0 auto;
+	}
+
 	.showpage {
 		width: 80%;
 		height: auto;
@@ -56,7 +79,6 @@ html {
 	.form {
 		display: none;
 	}
-
 
 }
 

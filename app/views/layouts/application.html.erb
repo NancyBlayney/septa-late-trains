@@ -10,8 +10,9 @@
 	</head>
 	<body>
 		<div class="container">
-		<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
+
+		<p class="notice"><%= notice if !flash.empty?  %></p>
+		<p class="alert"><%= alert if !flash.empty?  %></p>
 		<div class="navbar">
 			<% if user_signed_in? %>
 				<%= link_to 'Log Out', destroy_user_session_path, method: :delete%>

@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 			if @user.is_verified
 
 			else
-				flash[:alert] = "PLEASE VERIFY YOUR PHONE NUMBER"
+				flash[:notice] = "PLEASE VERIFY YOUR PHONE NUMBER"
 				redirect_to verify_number_path(@user)
 			end
 			@times=load_times
