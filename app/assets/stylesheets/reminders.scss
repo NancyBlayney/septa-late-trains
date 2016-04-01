@@ -38,6 +38,22 @@
     }
   }
 }
+.no-reminders-msg{
+	text-align: center;
+	padding-top: 3%;
+	span{
+		margin: auto;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+.new-reminder-form, .edit-reminder-form {
+    padding: 5%;
+    h2{
+        padding-bottom: 6%;
+    }
+}
 .new-reminder-wrapper,
 .edit-reminder-form {
   table {
@@ -52,7 +68,27 @@
     }
   }
 }
-.exit{
+
+.exit {
   display: block;
   text-align: right;
+    text-align: right;
+		&:hover{
+			cursor:pointer;
+		}
+}
+.ex-edit{
+    // font-size: 2em;
+    width: 100%;
+    text-align: right;
+    a{
+        text-decoration: none;
+        color: $light-blue;
+    }
+}
+
+.new-reminder-btn{
+  &:hover{
+    background-color: $light-blue;
+  }
 }

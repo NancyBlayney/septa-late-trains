@@ -28,7 +28,7 @@
     color: $light-blue;
 }
 .container {
-  background: url('philly.jpg') no-repeat center center fixed; 
+  background: url('philly.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -77,13 +77,7 @@
     }
 }
 
-.new-reminder-form, .edit-reminder-form {
-    background: $div;
-    padding: 5%;
-    h2{
-        padding-bottom: 6%;
-    }
-}
+
 
 .button-class {
   background: rgba(0,0,0, .2);
@@ -99,22 +93,6 @@
 #makelittle {
     font-size: .7em;
 }
-.exit {
-    text-align: right;
-}
-.ex-edit{
-    font-size: 2em;
-    width: 100%;
-    text-align: right;
-    a{
-        text-decoration: none;
-        color: $light-blue;
-    }
-}
-.exit:hover{
-    cursor:pointer;
-}
-
 
 @media only screen and (min-width: 600px){
 	.show-page{
@@ -164,16 +142,4 @@
     padding: 8% 0;
 	}
 
-
-
-
 }
-
-
-
-
-
-
-
-
-
