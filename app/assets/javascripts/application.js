@@ -27,6 +27,7 @@ $(document).ready(function(){
 	$('.exit').click(function(e){
 		e.preventDefault();
 		$('.new-reminder-form').hide();
+		document.getElementById('show-page').scrollIntoView()
 	});
 
 

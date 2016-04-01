@@ -1,9 +1,10 @@
-<div class="show-page">
+<div id='show-page' class="show-page">
   <div class="col1">
     <div class="user-info card">
       <h2>My Information</h2>
       <div class="info-field">
-        <strong>Email:</strong> <%= @user.email %>
+        <strong>Email:</strong>
+        <%= @user.email %>
       </div>
       <div class="info-field">
         <strong>Phone:</strong>
@@ -23,13 +24,18 @@
             </td>
             <td>
               <%= link_to  new_reminder_path, :class => 'new-reminder' do%>
-              <i class="fa fa-plus-square fa-2x"></i>
+              <i id='new-reminder-btn' class="fa fa-plus-square fa-2x"></i>
               <% end %>
             </td>
           </tr>
         </table>
       </div>
-
+<% if @reminders.count==0 %>
+<div class="no-reminders-msg">
+  <span>You currently have no reminders</span><br>
+  <span>Use the <i class="fa fa-plus-square"></i> above to add. </span>
+</div>
+<% end %>
       <% @reminders.each do |reminder| %>
       <div class="reminder-container">
         <div class="train-container">
@@ -53,7 +59,6 @@
 
         </div>
       </div>
-
       <% end %>
 
     </div>
@@ -63,8 +68,6 @@
     <div id='new-reminder-form' class="new-reminder-form form">
       <%= render 'shared/new' %>
     </div>
-    <div id="edit-form-place">
-
-    </div>
+    <div id="edit-form-place"></div>
   </div>
 </div>
