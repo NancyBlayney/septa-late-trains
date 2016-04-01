@@ -2,7 +2,7 @@
 
 <!-- displays user's number as they entered it while signing up -->
 <div class="phone-number">
-<h1><%= @user.mobile_number %></h1>
+<h1><%= number_to_phone(@user.mobile_number) %></h1>
 </div>
 <!-- this should be the option to edit their number if they made a mistake -->
 <div class="edit-number-button">
