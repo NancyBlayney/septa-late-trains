@@ -4,8 +4,7 @@ def self.send_message(rems)
 rems.each do |r|
   to = r[:user_phone]
   msg="Train # #{r[:trainno]} is currently running #{r[:offset]} minutes late."
-puts msg
-  # self.send(to,msg)
+  self.send(to,msg)
 end
 end
 private

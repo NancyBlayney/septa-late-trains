@@ -52,15 +52,15 @@ html {
 	display: none;
 }
 
-@media only screen and (min-width: 500px){
+@media only screen and (min-width: 600px){
 
 	.notice, .alert {
-		width: 80%;
+		width: 90%;
 		margin: 0 auto;
 	}
 
 	.showpage {
-		width: 80%;
+		width: 90%;
 		height: auto;
 		margin: 0 auto;
 	}
@@ -71,13 +71,28 @@ html {
 
 	.col1 {
 		float: left;
-		width: 40%;
+		width: 50%;
 	}
 
 	.col2 {
 		float: left;
-		width: 60%;
+		width: 50%;
 	}
 
 
+}
+
+
+
+@media only screen and (min-width: 1000px){
+	.notice, .alert {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.showpage {
+		width: 80%;
+		height: auto;
+		margin: 0 auto;
+	}
 }

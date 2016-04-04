@@ -98,7 +98,7 @@
 	.show-page{
     // min-height: 100vh;
     background: $div;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     overflow: auto;
     color: $light-blue;
@@ -110,17 +110,17 @@
 	}
 
 	.navbar{
-		width: 80%;
+		width: 90%;
 		margin: 0 auto;
 	}
 
 	.sign-page {
-		width: 80%;
-		margin: 0 auto;
-    background-color:$div;
-    height: 100vh;
-    text-align: center;
-    color: $light-blue;
+    	width: 90%;
+        margin: 0 auto;
+        background-color:$div;
+        height: 100vh;
+        text-align: center;
+        color: $light-blue;
 	}
 
 	.button-class {
@@ -144,7 +144,29 @@
 
   .col2{
     margin-top: 2%;
-    // margin-right: 2%;
   }
 
 }
+
+@media only screen and (min-width: 1000px){
+    .show-page{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .navbar{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .sign-page{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+
+

@@ -50,12 +50,17 @@ html{
 
 @media only screen and (min-width: 600px){
 	#home-page{
-		width: 80%;
+		width: 90%;
 		margin: 0 auto;
 	}
 }
 
-
+@media only screen and (min-width: 1000px){
+	#home-page{
+		width: 80%;
+		margin: 0 auto;
+	}
+}
 
 
 
