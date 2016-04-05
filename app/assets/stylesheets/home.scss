@@ -3,9 +3,30 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "colors";
+
 html{
 	background-color: $light-blue;
 }
+
+.flash {
+	width: 100%;
+	background: rgba(0, 0, 0, .7);
+	font-weight: 600;
+	font-size: 1.3em;
+}
+
+.notice{
+	@extend .flash
+	color: #E9F3FD;
+}
+
+.alert{
+	@extend .flash
+	color: #FF0000;
+}
+
+
+
 
 .container {
   background: url('philly.jpg') no-repeat center center fixed; 
@@ -61,7 +82,6 @@ html{
 		margin: 0 auto;
 	}
 }
-
 
 
 
