@@ -27,15 +27,16 @@
     background-color: black;
     color: $light-blue;
     padding: 5px;
-    a {
-      color: transparent;
-       :hover {
+    i {
+      color: $light-blue;
+      &:hover {
         color: $main-blue;
       }
-      i {
-        color: $light-blue;
-      }
     }
+    a {
+      color: transparent;
+
+      }
   }
 }
 .no-reminders-msg{
