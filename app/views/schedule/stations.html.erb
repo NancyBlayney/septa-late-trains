@@ -1,7 +1,12 @@
-
 <div class="stations">
+  <script type="text/javascript">
+    $('.station-wrapper').click(function (e) {
+      station = $(e.target).data('station')
+      setStation(station)
+    });
+  </script>
   <% @stations.each do |s| %>
-  <div class="station-wrapper">
+  <div class="station-wrapper" data-station='<%=s%>'>
     <%= s %>
   </div>
   <% end %>

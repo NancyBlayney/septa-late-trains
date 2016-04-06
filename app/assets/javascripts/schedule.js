@@ -2,13 +2,17 @@ $(document).ready(function() {
   $('.sched-btn').click(function(e) {
      train = $(e.target).data('train')
      if (Cookies.get(train)) {
-       station=Cookies.get(train)
-       getScheduleForStation(train,station)
+       station=Cookies.get(train);
+       getScheduleForStation(train,station);
      }else{
-       getStationsForTrain(train)
+       getStationsForTrain(train);
      }
-  })
+  });
 });
+
+function setStation(station) {
+  getScheduleForStation(train,station)
+}
 
 function getStationsForTrain(train) {
   $.post('/stations', {
@@ -39,22 +43,3 @@ function showScheduleForm() {
   $('.edit-reminder-form').remove();
   $('#schedule-form').show()
 }
-
-
-// if (Cookies.get('name')) {
-//      $('body').append(Cookies.get('name'))
-//      $('#btn').html('Remove cookie')
-//      $('#btn').click(removeCookie)
-//      $("#btn").animate({
-//          opacity: 0.55,
-//          left: "+=50",
-//          height: "toggle"
-//      }, 1000)
-//  } else {
-//      $('#btn').html('Set cookie')
-//      $('#btn').click(setCookie)
-//  }
-
-// function setCookie() {
-//     Cookies.set('name', $('#name').val())
-// }

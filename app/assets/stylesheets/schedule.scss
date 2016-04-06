@@ -19,7 +19,7 @@
 .stations{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: $div;
   .station-wrapper{
     padding: 0.5em;
