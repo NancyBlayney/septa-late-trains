@@ -1,0 +1,34 @@
+@import "colors";
+.sched{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $div;
+  div{
+    clear: both;
+    margin: 1em;
+    table{
+
+    td{
+      padding: 1em;
+      border: 1px solid $light-blue;
+    }
+    }
+  }
+}
+
+.stations{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: $div;
+  .station-wrapper{
+    padding: 0.5em;
+    border: 1px solid $light-blue;
+    margin: 0.5em;
+    &:hover{
+      background-color: $main-blue;
+      cursor: pointer;
+    }
+  }
+
+}

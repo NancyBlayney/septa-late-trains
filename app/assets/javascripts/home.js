@@ -1,20 +1,30 @@
-$(document).ready(function(){
-	
-	// $('.verify_button').click(function(){
+$(document).ready(function() {
 
-	// 	.ajax ({
-	// 		url: url,
-	// 		type: "GET",
- //  		data: data,
- //  		success: success,
- //  		dataType: dataType
+  $('.new-reminder').click(function(e) {
+    e.preventDefault();
+    $('.edit-reminder-form').remove();
+    $('.new-reminder-form').show();
+    $('#schedule-form').hide()
+    document.getElementById('new-reminder-form').scrollIntoView();
+  });
 
-	// 	});
+  $('.exit').click(function(e) {
+    e.preventDefault();
+    $('.new-reminder-form').hide();
+      $('#schedule-form').hide();
+    document.getElementById('show-page').scrollIntoView()
+  });
 
 
-	// });
+  $('.edit-reminder').click(function(e) {
+    e.preventDefault();
+    $('.new-reminder-form').hide();
+    $('#schedule-form').hide()
+  });
 
-
+  setTimeout(function() {
+    $('.notice, .alert, .advice').remove();
+  }, 3000);
 
 
 
