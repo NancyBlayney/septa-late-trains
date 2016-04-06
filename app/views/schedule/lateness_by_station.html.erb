@@ -1,0 +1,17 @@
+<div>
+  <%= @train_station_info[:stop]%><br>
+  <table>
+  <% @train_station_info.each_key do |k| %>
+  <% if k!=:stop %>
+  <tr>
+    <td>
+      <%= k.strftime("%a %b %d") %>
+    </td>
+    <td>
+      <%= @train_station_info[k] %><span> minute(s) late</span>
+    </td>
+  </tr>
+  <% end %>
+  <% end %>
+</table>
+</div>

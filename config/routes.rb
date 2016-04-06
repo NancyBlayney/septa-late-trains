@@ -1,21 +1,24 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => { :registrations => "acme/registrations"}
+  root to: 'home#index'
 
+  devise_for :users, :controllers => { :registrations => "acme/registrations"}
   post 'verifications' => 'verifications#create'
   patch 'verifications' => 'verifications#verify'
   resources :users, only: [:show]
   resources :reminders, only: [:new, :create,:show, :edit, :update,:destroy]
   get 'verify_number' => 'users#verify_number'
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-  root to: 'home#index'
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
+
+  get 'schedule/index'
+  post '/schedule' => 'schedule#index'
+post '/stations'=> 'schedule#stations'
+post '/lateness_by_station'=> 'schedule#lateness_by_station'
 
 
 
     # Rails.application.routes.draw do
+  get 'schedule/index'
+
     #   devise_for :users, controllers: {
     #     sessions: 'sessions'
     #   }

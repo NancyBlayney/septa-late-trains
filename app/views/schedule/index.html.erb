@@ -1,0 +1,21 @@
+<div class="sched">
+<% @hist.each do |h|%>
+<div>
+  <%= h[:stop]%><br>
+  <table>
+  <% h.each_key do |k| %>
+  <% if k!=:stop %>
+  <tr>
+    <td>
+      <%= k.strftime("%a %b %d") %>
+    </td>
+    <td>
+      <%= h[k] %><span> minute(s) late</span>
+    </td>
+  </tr>
+  <% end %>
+  <% end %>
+</table>
+</div>
+<% end %>
+</div>

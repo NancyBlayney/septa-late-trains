@@ -41,5 +41,16 @@ $(document).ready(function(){
     $('.notice, .alert, .advice').remove();
   }, 3000);
 
+	$.post('/stations',{train:1256}
+	).done(function(data){
+	  $('.col2').append(data)
+
+	})
+
+	// $.post('/lateness_by_station',{station:'Darby',train:1256}
+	// ).done(function(data){
+	// 	$('.col2').append(data)
+	//
+	// })
 
 });

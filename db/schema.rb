@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160330142541) do
+ActiveRecord::Schema.define(version: 20160402205034) do
 
   create_table "reminders", force: :cascade do |t|
     t.integer  "trainno"
@@ -19,6 +19,14 @@ ActiveRecord::Schema.define(version: 20160330142541) do
     t.integer  "offset"
     t.string   "days"
     t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trains", force: :cascade do |t|
+    t.string   "trainno"
+    t.string   "dest"
+    t.string   "source"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

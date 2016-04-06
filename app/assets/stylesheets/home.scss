@@ -15,21 +15,21 @@ html{
 	font-size: 1.3em;
 }
 
-.notice{
-	@extend .flash
-	color: #E9F3FD;
-}
-
-.alert{
-	@extend .flash
-	color: #FF0000;
-}
+// .notice{
+// 	@extend .flash
+// 	color: #E9F3FD;
+// }
+//
+// .alert{
+// 	@extend .flash
+// 	color: #FF0000;
+// }
 
 
 
 
 .container {
-  background: url('philly.jpg') no-repeat center center fixed; 
+  background: url('philly.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -82,10 +82,3 @@ html{
 		margin: 0 auto;
 	}
 }
-
-
-
-
-
-
-

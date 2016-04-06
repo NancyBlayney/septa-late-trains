@@ -1,0 +1,11 @@
+.sched{
+  display: flex;
+  flex-wrap: wrap;
+  div{
+    clear: both;
+    margin: 1em;
+    table,td{
+      border: 1px solid black;
+    }
+  }
+}
