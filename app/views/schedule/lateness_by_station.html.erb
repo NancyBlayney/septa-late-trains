@@ -6,8 +6,12 @@
     Back
   </div>
   <div>
-  <%= @train_station_info[:stop]%><br>
   <table>
+    <tr >
+      <td colspan="2">
+        <h3><%= @train_station_info[:stop]%></h3>
+      </td>
+    </tr>
   <% @train_station_info.each_key do |k| %>
   <% if k!=:stop %>
   <tr>

@@ -1,15 +1,27 @@
 @import "colors";
+@mixin sched-btn {
+  padding: 0.5em;
+  border: 1px solid $light-blue;
+  margin: 0.5em;
+  text-align: center;
+  &:hover{
+    background-color: $main-blue;
+    cursor: pointer;
+  }
+}
 .sched{
-  // display: flex;
-  flex-wrap: wrap;
   background-color: $div;
 padding: 2em;
 margin-right: 1em;
   div{
     clear: both;
     margin: 1em;
+    display: flex;
     table{
-
+margin: auto;
+h3{
+  text-align: center;
+}
     td{
       padding: 1em;
       border: 1px solid $light-blue;
@@ -19,33 +31,23 @@ margin-right: 1em;
 }
 
 .stations{
+  margin-right: 1em;
+  padding: 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   background-color: $div;
   .station-wrapper{
-    padding: 0.5em;
-    border: 1px solid $light-blue;
-    margin: 0.5em;
-    &:hover{
-      background-color: $main-blue;
-      cursor: pointer;
-    }
+  @include sched-btn;
   }
 
 }
 
+
 #backToSchedule{
-  padding: 0.5em;
-  border: 1px solid $light-blue;
-  // margin: 1em;
+@include sched-btn;
   position: relative;;
-  // top: 1em;
   left: 0.5em;
   width: 3em;
-  text-align: center;
-  &:hover{
-    background-color: $main-blue;
-    cursor: pointer;
-  }
+
 }
