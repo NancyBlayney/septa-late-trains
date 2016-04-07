@@ -31,6 +31,7 @@ function getScheduleForStation(train,station) {
     train: train,station:station
   }).done(function(data) {
     showScheduleForm()
+    Cookies.set(train,station)
     $('#schedule-form').html(data)
   }).fail(function() {
     showScheduleForm()
@@ -42,4 +43,9 @@ function showScheduleForm() {
   $('.new-reminder-form').hide();
   $('.edit-reminder-form').remove();
   $('#schedule-form').show()
+}
+
+function goBackToSchedule() {
+  Cookies.expire(train)
+  getStationsForTrain(train)
 }

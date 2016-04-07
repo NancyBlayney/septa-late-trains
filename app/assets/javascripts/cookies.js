@@ -1,9 +1,3 @@
-/*
- * Cookies.js - 1.2.2
- * https://github.com/ScottHamper/Cookies
- *
- * This is free and unencumbered software released into the public domain.
- */
 (function (global, undefined) {
     'use strict';
 
@@ -23,7 +17,7 @@
         // Used to ensure cookie keys do not collide with
         // built-in `Object` properties
         Cookies._cacheKeyPrefix = 'cookey.'; // Hurr hurr, :)
-        
+
         Cookies._maxExpireDate = new Date('Fri, 31 Dec 9999 23:59:59 UTC');
 
         Cookies.defaults = {
@@ -35,7 +29,7 @@
             if (Cookies._cachedDocumentCookie !== Cookies._document.cookie) {
                 Cookies._renewCache();
             }
-            
+
             var value = Cookies._cache[Cookies._cacheKeyPrefix + key];
 
             return value === undefined ? undefined : decodeURIComponent(value);
@@ -85,8 +79,9 @@
         };
 
         Cookies._generateCookieString = function (key, value, options) {
-            key = key.replace(/[^#$&+\^`|]/g, encodeURIComponent);
-            key = key.replace(/\(/g, '%28').replace(/\)/g, '%29');
+
+            key = key.toString().replace(/[^#$&+\^`|]/g, encodeURIComponent);
+            key = key.toString().replace(/\(/g, '%28').replace(/\)/g, '%29');
             value = (value + '').replace(/[^!#$&-+\--:<-\[\]-~]/g, encodeURIComponent);
             options = options || {};
 
@@ -130,7 +125,7 @@
                     console.error('Could not decode cookie with key "' + key + '"', e);
                 }
             }
-            
+
             return {
                 key: decodedKey,
                 value: cookieString.substr(separatorIndex + 1) // Defer decoding value until accessed

@@ -1,3 +1,6 @@
+<script type="text/javascript">
+  $('#backToSchedule').click(function(){goBackToSchedule()})
+</script>
 <div class="sched">
   <div>
   <%= @train_station_info[:stop]%><br>
@@ -15,5 +18,8 @@
   <% end %>
   <% end %>
 </table>
+</div>
+<div id='backToSchedule'>
+  Back
 </div>
 </div>
