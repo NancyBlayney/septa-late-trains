@@ -1,8 +1,10 @@
 @import "colors";
 .sched{
-  display: flex;
+  // display: flex;
   flex-wrap: wrap;
   background-color: $div;
+padding: 2em;
+margin-right: 1em;
   div{
     clear: both;
     margin: 1em;
@@ -31,4 +33,19 @@
     }
   }
 
+}
+
+#backToSchedule{
+  padding: 0.5em;
+  border: 1px solid $light-blue;
+  // margin: 1em;
+  position: relative;;
+  // top: 1em;
+  left: 0.5em;
+  width: 3em;
+  text-align: center;
+  &:hover{
+    background-color: $main-blue;
+    cursor: pointer;
+  }
 }
