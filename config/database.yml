@@ -20,6 +20,14 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+
 production:
   <<: *default
-  database: db/production.sqlite3
+  host: localhost
+  database: septa-late-trains_production
+  username: rails
+  password: <%= ENV['APP_DATABASE_PASSWORD'] %>
+
+
+
+
