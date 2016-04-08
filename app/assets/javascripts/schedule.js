@@ -49,3 +49,7 @@ function goBackToSchedule() {
   Cookies.expire(train)
   getStationsForTrain(train)
 }
+
+function hideSchedule() {
+    $('#schedule-form').hide()
+}

@@ -5,7 +5,6 @@ class ScheduleController < ApplicationController
 
   def stations
     if params[:train]
-      # binding.pry
       @stations=[]
       hist=Septa.history(params[:train])
       hist.each do |h|
