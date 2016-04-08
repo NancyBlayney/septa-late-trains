@@ -13,6 +13,7 @@
       <div class="field">
         <%= f.label :mobile_number %><br />
         <%= f.text_field :mobile_number %>
+        <h6>Format: 1XXXXXXXXXX </h6>
         <% if resource.is_verified %>
           You're mobile number is verified.
         <% end%>
