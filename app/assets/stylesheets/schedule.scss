@@ -11,21 +11,21 @@
 }
 .sched{
   background-color: $div;
-padding: 2em;
-margin-right: 1em;
+  padding: 2em;
+  margin-right: 1em;
   div{
     clear: both;
     margin: 1em;
     display: flex;
     table{
-margin: auto;
-h3{
-  text-align: center;
-}
-    td{
-      padding: 1em;
-      border: 1px solid $light-blue;
-    }
+      margin: auto;
+      h3{
+        text-align: center;
+      }
+      td{
+        padding: 1em;
+        border: 1px solid $light-blue;
+      }
     }
   }
 }

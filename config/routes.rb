@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
   get 'schedule/index'
   post '/schedule' => 'schedule#index'
-post '/stations'=> 'schedule#stations'
-post '/lateness_by_station'=> 'schedule#lateness_by_station'
+  post '/stations'=> 'schedule#stations'
+  post '/lateness_by_station'=> 'schedule#lateness_by_station'
 
 
 

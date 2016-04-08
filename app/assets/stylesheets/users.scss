@@ -8,25 +8,32 @@
         color: $light-blue;
     }
 }
+
 .sign-page {
     background-color:$div;
     height: 100vh;
     text-align: center;
     color: $light-blue;
+    overflow: auto;
 }
+
 .field {
     margin-top: 2vh;
 }
+
 .actions {
     padding: 30px;
 }
+
 .form1 {
-    padding-top: 20vh;
+    padding-top: 10vh;
 }
+
 .shared-link {
     text-decoration:none;
     color: $light-blue;
 }
+
 .container {
   background: url('philly.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -36,6 +43,7 @@
   overflow: auto;
   height: 100vh;
 }
+
 .show-page{
     min-height: 100vh;
     width: 100%;
@@ -49,6 +57,7 @@
         text-decoration: underline;
     }
 }
+
 .user-info{
     position: relative;
 }
@@ -85,9 +94,18 @@
   text-decoration: none;
   border: 1px solid $light-blue;
   padding: 3%;
+  font-family: 'Poiret One', cursive;
+  &:hover {
+    cursor: pointer;
+    background: rgba(0,0,0, .5);
+    border-color: $main-blue;
+  }
+}
+
+.back {
   position: absolute;
   top: 10%;
-  right: 5%;
+  right: 5%;  
 }
 
 #makelittle {
@@ -129,10 +147,13 @@
 	  text-decoration: none;
 	  border: 1px solid $light-blue;
 	  padding: 3%;
-	  position: absolute;
-	  top: 20%;
-	  right: 20%;
 	}
+
+    .back{
+      position: absolute;
+      top: 20%;
+      right: 20%;
+    }
 
 	.card {
     background-color:$div;
