@@ -2,11 +2,10 @@
 $('.station-wrapper').click(function (e) {
   station = $(e.target).data('station')
   setStation(station)
-  $('#station-close').click(function(){hideSchedule()})
 });
 </script>
 <div class="stations">
-    <i id='station-close' class="fa fa-times exit fa-2x"></i>
+  <h3>Choose a station:</h3>
   <% @stations.each do |s| %>
   <div class="station-wrapper" data-station='<%=s%>'>
     <%= s %>
