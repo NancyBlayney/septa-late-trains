@@ -19,6 +19,7 @@
 
 .field {
     margin-top: 2vh;
+    padding: 2%;
 }
 
 .actions {
@@ -27,6 +28,9 @@
 
 .form1 {
     padding-top: 10vh;
+    h3 {
+        padding: 3%;
+    }
 }
 
 .shared-link {
@@ -98,7 +102,8 @@
 .back {
   position: absolute;
   top: 10%;
-  right: 5%;  
+  right: 5%; 
+  background-color: black; 
 }
 
 #makelittle {

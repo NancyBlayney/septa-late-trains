@@ -6,8 +6,8 @@ class VerificationsController < ApplicationController
 	  current_user.save
 
 	  to = current_user.mobile_number
-	  if to[0] = "0"
-	    to.sub!("0", '+1')
+	  if to[0] != "1"
+	    to.insert(0, '1')
 	  end
 
 	  @twilio_client = Twilio::REST::Client.new ENV['TWILIO_SID'], ENV['TWILIO_TOKEN']
@@ -16,7 +16,7 @@ class VerificationsController < ApplicationController
 	    :to => to,
 	    :body => "Your verification code is #{current_user.verification_code}."
 	  )
-	  # looking to add some AJAX here so that the page doesn't awkwardly refresh
+
 	 	redirect_to :back
 		flash[:notice] = "Verification Code Sent."
 	end

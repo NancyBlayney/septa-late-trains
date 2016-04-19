@@ -15,7 +15,6 @@ html{
 	font-size: 1.3em;
 }
 
-
 .container {
   background: asset-url('philly.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -24,6 +23,7 @@ html{
   background-size: cover;
   overflow: auto;
   height: 100vh;
+  font-size: 1.2em;
 }
 
 #home-page{
@@ -31,15 +31,14 @@ html{
 	height: 100vh;
 	color: $light-blue;
 	text-align:center;
-}
-
-.logo {
-	padding-top: 5vh;
-	font-size: 1.5em;
-}
-
-.buttons {
-	padding-top: 20vh;
+	.logo {
+		padding: 3%;
+		padding-top: 5vh;
+		font-size: 1.5em;
+	}
+	.buttons {
+		padding-top: 8vh;
+	}
 }
 
 .home-div a {
@@ -55,6 +54,11 @@ html{
 	font-size:4vh;
 	padding:10px 20px;
 	background: rgba(0,0,0,.7);
+		&:hover {
+    cursor: pointer;
+    background: rgba(0,0,0, .5);
+    border-color: $main-blue;
+	}
 }
 
 @media only screen and (min-width: 600px){

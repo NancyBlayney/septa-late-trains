@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-has_many :reminders
+  has_many :reminders
+  validate :phone_format
 	# validates_uniqueness_of :mobile_number
   validates :mobile_number, phone: { possible: false, allow_blank: false, types: [:mobile] }
   # Include default devise modules. Others available are:
@@ -9,18 +10,19 @@ has_many :reminders
 
 
 
-
   def needs_mobile_number_verifying?
     if is_verified
       return false
     end
-    # if mobile_number.empty?
-    #   return false
-    # end
+
     return true
   end
 
-
+  def phone_format
+    if mobile_number[0] != '1'
+      mobile_number.insert(0, '1')
+    end
+  end
 
 
 end
