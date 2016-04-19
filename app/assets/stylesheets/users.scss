@@ -61,16 +61,12 @@
 }
 
 .info-field{
-    -webkit-appearance: none;
     padding: 2%;
     margin: 2%;
     strong{
         font-size: 1.2em;
         font-weight: 700;
     }
-}
-
-.edit-profile {
     a{
         color: $light-blue;
         text-decoration: none;
@@ -82,6 +78,7 @@
         background: rgba(0,0,0, .2);
     }
 }
+
 
 
 .button-class {
