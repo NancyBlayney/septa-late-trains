@@ -8,10 +8,10 @@
       </div>
       <div class="info-field">
         <strong>Phone:</strong>
-        <%=number_to_phone(@user.mobile_number) %>
+        <%= number_to_phone(@user.mobile_number) %>
       </div>
       <br><br><br>
-      <div class="info-field">
+      <div class="edit-profile">
         <strong><%= link_to 'Edit Profile', edit_user_registration_path, :class => 'button-class' %></strong>
       </div>
     </div>
