@@ -29,7 +29,6 @@ html {
 	margin: 0 auto;
 }
 
-
 .notice, .alert {
 	width: 100%;
 	background: rgba(0, 0, 0, .7);
@@ -44,7 +43,6 @@ html {
 .alert{
 	color: #FF0000;
 }
-
 
 .form {
 	display: none;
@@ -66,23 +64,24 @@ html {
 	.card {
 		height: auto;
 	}
-
-	.col1 {
-		float: left;
-		width: 50%;
-	}
-
 	.col2 {
-		float: left;
-		width: 50%;
+		width: 90%;
+		margin: 0 auto;
 	}
-
-
 }
 
 
 
 @media only screen and (min-width: 1000px){
+	.col1 {
+		float: left;
+		width: 53%;
+	}
+
+	.col2 {
+		float: left;
+		width: 45%;
+	}
 	.notice, .alert {
 		width: 80%;
 		margin: 0 auto;

@@ -1,10 +1,11 @@
 @import "colors";
+
 .navbar {
     background: $div;
     text-align: right;
     a {
         display: block;
-        padding: 4%;
+        padding: 3vh;
         color: $light-blue;
     }
 }
@@ -18,7 +19,7 @@
 }
 
 .field {
-    margin-top: 2vh;
+    margin-top: 1vh;
     padding: 2%;
 }
 
@@ -29,7 +30,7 @@
 .form1 {
     padding-top: 10vh;
     h3 {
-        padding: 3%;
+        padding: 2%;
     }
 }
 
@@ -41,12 +42,15 @@
 
 
 .show-page{
-    min-height: 100vh;
+    min-height: 93vh;
     width: 100%;
     background: $div;
     margin: 0 auto;
     overflow: auto;
     color: $light-blue;
+    .user-info-field {
+        margin: 1% 8%;
+    }
     h2{
         padding-top: 5%;
         text-align: center;
@@ -85,7 +89,7 @@
 
 
 
-.button-class {
+.button-class, .button-class-wide{
   background: rgba(0,0,0, .2);
   color: $light-blue;
   text-decoration: none;
@@ -98,6 +102,11 @@
     border-color: $main-blue;
   }
 }
+
+.button-class-wide{
+  padding: 3% 10%;
+}
+
 
 .back {
   position: absolute;
@@ -154,11 +163,11 @@
     }
 
 	.card {
-    background-color:$div;
-    margin: 5%;
-    min-height: 20vh;
-    height: 100%;
-    padding: 8% 0;
+        background-color:$div;
+        margin: 0 5% 3%;
+        min-height: 20vh;
+        height: 100%;
+        padding: 8% 0;
 	}
 
   .col2{

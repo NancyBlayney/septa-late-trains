@@ -50,18 +50,23 @@
 	}
 }
 
-.new-reminder-form, .edit-reminder-form {
+.new-reminder-form1, .edit-reminder-form {
   background-color: $div;
-  // margin-top:
-    padding: 5%;
-    h2{
-        padding-bottom: 6%;
-    }
+  padding: 5%;
+  .form-info, .new-reminder{
+    width: 80%;
+    margin: 0 auto;
+  }
+  h2{
+    padding-bottom: 6%;
+  }
 }
 .new-reminder-wrapper,
 .edit-reminder-form {
   table {
     color: $light-blue;
+    max-width: 90%;
+    margin: 0 auto;
     th,
     td {
       border: 1px solid $light-blue;
@@ -90,6 +95,7 @@
         color: $light-blue;
     }
 }
+
 
 .new-reminder-btn{
   &:hover{

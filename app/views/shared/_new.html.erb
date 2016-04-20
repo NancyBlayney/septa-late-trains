@@ -1,6 +1,8 @@
-<i class="fa fa-times exit fa-2x"></i>
+
 <div class="new-reminder-wrapper">
   <div class="new-reminder-form1">
+  <i class="fa fa-times exit fa-2x"></i>
+  <div class="form-info">
     <h2>Make a New Reminder</h2>
     <%= form_for Reminder.new do |f| %>
     <table>
@@ -56,5 +58,6 @@
       </tr>
     </table>
     <% end %>
+    </div>
   </div>
 </div>

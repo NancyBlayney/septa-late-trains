@@ -1,16 +1,17 @@
 <div id='show-page' class="show-page">
+  
   <div class="col1">
+
     <div class="user-info card">
       <h2>My Information</h2>
       <div class="info-field">
-        <strong>Email:</strong>
-        <strong><%= @user.email %></strong>
+        Email:
+        <div class="user-info-field"><strong><%= @user.email %></strong></div>
       </div>
       <div class="info-field">
-        <strong>Phone:</strong>
-        <strong><%=number_to_phone(@user.mobile_number) %></strong>
+        Phone:
+        <div class="user-info-field"><strong><%=number_to_phone(@user.mobile_number) %></strong></div>
       </div>
-      <br><br><br>
       <div class="info-field">
         <strong><%= link_to 'Edit Profile', edit_user_registration_path, :class => 'button-class' %></strong>
       </div>
@@ -31,12 +32,12 @@
           </tr>
         </table>
       </div>
-<% if @reminders.count==0 %>
-<div class="no-reminders-msg">
-  <span>You currently have no reminders</span><br>
-  <span>Use the <i class="fa fa-plus-square"></i> above to add. </span>
-</div>
-<% end %>
+      <% if @reminders.count==0 %>
+        <div class="no-reminders-msg">
+          <span>You currently have no reminders</span><br>
+          <span>Use the <i class="fa fa-plus-square"></i> above to add. </span>
+        </div>
+      <% end %>
       <% @reminders.each do |reminder| %>
       <div class="reminder-container">
         <div class="train-container">
@@ -61,12 +62,10 @@
         </div>
       </div>
       <% end %>
-
     </div>
-
   </div>
+
   <div class="col2">
-  
     <div id='schedule-form'>
     </div>
     <div id='new-reminder-form' class="new-reminder-form form reminder-form">
@@ -74,4 +73,5 @@
     </div>
     <div id="edit-form-place"></div>
   </div>
+
 </div>
